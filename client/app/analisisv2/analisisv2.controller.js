@@ -1,5 +1,5 @@
 'use strict';
-
+//simentalesputo
 angular.module('nabuApp')
   .controller('Analisisv2Ctrl', function ($scope, $http, socket) {
     $scope.message = 'Simen es puto';
