@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Labtests:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="labtest in labtests">
+        <li><a tooltip="{{labtest.type}}">{{labtest.user}}<span class="glyphicon glyphicon-trash pull-right" ng-click="deleteLabTest(labtest)"></span><span ng-click="editTest(labtest)" class="glyphicon glyphicon-pencil pull-right"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Nombre" ng-model="user">
+    </p>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Typo" ng-model="typeTest">
+    </p>
+    <span class="input-group-btn">
+    	<div ng-if="edit == false">
+    		<button type="submit" class="btn btn-primary" ng-click="addLabTest()">Add New</button>
+    	</div>
+        
+        <div ng-if="edit == true">
+        	<button type="submit" class="btn btn-primary" ng-click="save(labtest)">Editar</button>
+        	<button type="submit" class="btn btn-danger" ng-click="cancel()">Cancel</button>
+        </div>
+
+      </span>
+
+    <span ng-show ="edit === 1" class="input-group-btn">
+        
+      </span>  
+  </form>
+</div>

@@ -18,6 +18,9 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/analisisv2/analisisv2.socket').register(socket);
+  require('../api/labtest/labtest.socket').register(socket);
+  require('../api/lab/lab.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
 
